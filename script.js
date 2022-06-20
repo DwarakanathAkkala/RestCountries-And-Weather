@@ -44,10 +44,10 @@ const displayData = (objData) => {
                 <div class="card-text">
                     <p>Capital: ${objData.capital == undefined ? "N/A" : objData.capital}</p>
                     <p>Region: ${objData.region}</p>
-                    <p>Lat ${objData.latlng == undefined ? "N/A" : objData.latlng[0]} Long ${objData.latlng ==undefined ? "N/A" : objData.latlng[1]} </p>
-                    <p>Country Code ${objData.alpha3Code}</p>
-                    <p>Native Name ${objData.nativeName}</p>
-                    <p>Population ${objData.population}</p>
+                    <p>Lat: ${objData.latlng == undefined ? "N/A" : objData.latlng[0]} Long: ${objData.latlng ==undefined ? "N/A" : objData.latlng[1]} </p>
+                    <p>Country Code: ${objData.alpha3Code}</p>
+                    <p>Native Name: ${objData.nativeName}</p>
+                    <p>Population: ${objData.population}</p>
                 </div>
             </div>
             
