@@ -16,8 +16,8 @@ This is a basic website which lists all the major countries and also shows the e
 
 ### Links
 
-- Solution URL: [https://github.com/DwarakanathAkkala/RestCountries-And-Weather]
-- Live Site URL: [https://rest-countries-and-weather.netlify.app/]
+- Solution URL: https://github.com/DwarakanathAkkala/RestCountries-And-Weather
+- Live Site URL: https://rest-countries-and-weather.netlify.app/
 
 ## My process
 
@@ -45,7 +45,7 @@ This is a basic website which lists all the major countries and also shows the e
 </div>
 ```
 
-```CSS - Added Compatibilty for all types of devices
+```CSS
 @media screen and (min-width: 768px) and (min-height: 1024px) {
     .card-img-top {
         height  : 20vh;
@@ -55,8 +55,8 @@ This is a basic website which lists all the major countries and also shows the e
 
 ### Useful resources
 
-- [https://restcountries.com/v3.1/all] - This helped me for fetching all the Countries Data with Latitude and Longitudes.
-- [https://api.openweathermap.org/data/2.5/weather] - This is an amazing API where we can get the latest weather data using the latitude and longitude of locations.
+- https://restcountries.com/v3.1/all - This helped me for fetching all the Countries Data with Latitude and Longitudes.
+- https://api.openweathermap.org/data/2.5/weather - This is an amazing API where we can get the latest weather data using the latitude and longitude of locations.
 
 ## Author
 
