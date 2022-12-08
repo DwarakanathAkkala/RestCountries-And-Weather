@@ -1,17 +1,17 @@
 // Create Container using DOM
-var container = document.createElement("div");
+let container = document.createElement("div");
 container.className = "container";
 container.innerHTML = `
-<h1 id="title" class="text-center">Rest Countries & Weather</h1><br/><br/>
+<h1 id="title" class="text-center">Countries & Weather</h1><br/><br/>
 <div class="row" id="content">
     <div class="text-center">
-        <img class="loader" src="Hourglass.gif">
+        <img class="loader" src="/assets/images/hourglass.gif">
     </div>
 </div>
 `;
 
 // Rest Countries API URL
-const restCountriesURL = "https://restcountries.com/v2/all";
+const restCountriesURL = "https://restcountries.com/v3.1/all";
 
 // Retrieve Rest Countries Data
 async function getData() {
@@ -38,15 +38,14 @@ const displayData = (objData) => {
     content.innerHTML += `
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 g-4">
         <div class="card h-100">
-            <div class="card-header">${objData.name}</div>
-            <img class="card-img-top" src="${objData.flags.png}" alt="${objData.name}">
+            <div class="card-header">${objData.name.common}</div>
+            <img class="card-img-top" src="${objData.flags.png}" alt="${objData.name.common}">
             <div class="card-body">
                 <div class="card-text">
                     <p>Capital: ${objData.capital == undefined ? "N/A" : objData.capital}</p>
                     <p>Region: ${objData.region}</p>
+                    <p>Country Code: ${objData.cioc ? objData.cioc : "N/A"}</p>
                     <p>Lat: ${objData.latlng == undefined ? "N/A" : objData.latlng[0]} Long: ${objData.latlng ==undefined ? "N/A" : objData.latlng[1]} </p>
-                    <p>Country Code: ${objData.alpha3Code}</p>
-                    <p>Native Name: ${objData.nativeName}</p>
                     <p>Population: ${objData.population}</p>
                 </div>
             </div>
@@ -75,7 +74,7 @@ async function buttonClick(lat, long, weatherTextId, btnID) {
             document.getElementById(btnID).style.display ="none";
 
             document.getElementById(weatherTextId).innerHTML = `
-                <p class="weather"><b>Weather Data Not Available</b> 
+                <p class="weather"><b>Weather Data Not Available</b></p> 
             `;
         }
         const APIURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon="+ long +"&appid=6f3505160a1685507f3841703b8e968d";
